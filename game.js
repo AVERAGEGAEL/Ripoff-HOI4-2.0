@@ -16,16 +16,18 @@ const countries = {
 
 let selectedCountry = null;
 
-// Render countries on the map
+// Check if all country divs exist before adding event listeners
 const map = document.getElementById('map');
 Object.keys(countries).forEach(countryId => {
   const countryElement = document.getElementById(countryId);
-  countryElement.innerText = countries[countryId].name;
-  countryElement.addEventListener('click', () => {
-    selectedCountry = countries[countryId];
-    highlightSelectedCountry(countryElement);
-    renderStats(selectedCountry);
-  });
+  if (countryElement) {
+    countryElement.innerText = countries[countryId].name;
+    countryElement.addEventListener('click', () => {
+      selectedCountry = countries[countryId];
+      highlightSelectedCountry(countryElement);
+      renderStats(selectedCountry);
+    });
+  }
 });
 
 // Highlight selected country
