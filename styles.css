@@ -1,44 +1,92 @@
+/* General body styling */
 body {
-    background-color: #222;
-    color: white;
-    text-align: center;
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
+/* Header styling */
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Game container */
 #game-container {
-    position: relative;
-    width: 800px;
-    margin: auto;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Map container */
 #map-container {
     position: relative;
     display: inline-block;
 }
 
+/* Game map */
 #game-map {
-    width: 100%;
-    max-width: 800px;
+    width: 800px; /* Adjust the size to fit your image */
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 4px;
 }
 
+/* Country buttons */
 .country {
     position: absolute;
-    background: transparent;
-    border: 2px solid yellow;
-    padding: 3px 8px;
-    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
     cursor: pointer;
-    transform: translate(-50%, -50%);
 }
 
 .country:hover {
-    background: rgba(255, 255, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* Stats section */
 #stats {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#stats h3 {
+    margin-top: 0;
+}
+
+#country-info {
     margin-top: 10px;
-    padding: 10px;
-    border: 2px solid white;
-    background: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+}
+
+/* Attack Button */
+#attackButton {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#attackButton:hover {
+    background-color: #0056b3;
 }
