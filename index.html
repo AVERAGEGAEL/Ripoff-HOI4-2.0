@@ -1,42 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOI4-Inspired Game</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOI4-Inspired Game</title>
+    <style>
+        body {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #game-container {
+            position: relative;
+            width: 800px;
+            margin: auto;
+        }
+
+        #map-container {
+            position: relative;
+        }
+
+        #game-map {
+            width: 100%;
+            max-width: 800px;
+            border: 3px solid #777;
+        }
+
+        #stats {
+            margin-top: 10px;
+            padding: 10px;
+            border: 2px solid white;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .selected {
+            outline: 3px solid yellow;
+        }
+    </style>
 </head>
 <body>
-  <div id="gameContainer">
-    <div id="map">
-      <div class="country" id="germany">Germany</div>
-      <div class="country" id="france">France</div>
-      <div class="country" id="poland">Poland</div>
-      <div class="country" id="russia">Russia</div>
-      <div class="country" id="italy">Italy</div>
-      <div class="country" id="austria">Austria</div>
-      <div class="country" id="spain">Spain</div>
-      <div class="country" id="portugal">Portugal</div>
-      <div class="country" id="belgium">Belgium</div>
-      <div class="country" id="switzerland">Switzerland</div>
-      <div class="country" id="czechia">Czechia</div>
-      <div class="country" id="netherlands">Netherlands</div>
-    </div>
-    <div id="stats">
-      <h3>Select a country to view its stats</h3>
-    </div>
-    <div id="controls">
-      <button id="startGame">Start Game</button>
-      <button id="attackButton">Attack</button>
-    </div>
-  </div>
-  
-  <script src="game.js"></script>
-</body>
-</html>
 
-  </div>
-  
-  <script src="game.js"></script> <!-- Link to your external game logic -->
+    <h1>HOI4-Inspired Strategy Game</h1>
+
+    <div id="game-container">
+        <div id="map-container">
+            <!-- Use Your Uploaded Map -->
+            <img src="europe_map.jpg" usemap="#europe-map" id="game-map" alt="Map of Europe">
+
+            <map name="europe-map">
+                <area shape="poly" coords="320,200, 340,230, 370,220, 350,190" href="#" alt="Germany" id="germany">
+                <area shape="poly" coords="250,250, 280,280, 310,270, 290,240" href="#" alt="France" id="france">
+                <area shape="poly" coords="400,180, 420,210, 440,200, 430,170" href="#" alt="Poland" id="poland">
+            </map>
+        </div>
+
+        <button id="attackButton">Attack</button>
+        
+        <div id="stats">
+            <h3>Country Stats</h3>
+            <p>Select a country to view stats.</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+
 </body>
 </html>
